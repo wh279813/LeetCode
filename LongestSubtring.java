@@ -16,7 +16,7 @@
                 else
                 {
                     maxLength = GetLarger(maxLength, len);
-                    for (int j = (int)ht[tempChar]; j >= (int)ht[tempChar] - i + len; j--)
+                    for (int j = (int)ht[tempChar]; j >=  i - len; j--)
                     {
                         ht.Remove(charArray[j]);
                         len = len - (int)ht[tempChar] + 1;
