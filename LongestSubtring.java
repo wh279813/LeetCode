@@ -20,6 +20,7 @@
                     {
                         ht.Remove(charArray[j]);
                         len = len - (int)ht[tempChar] + 1;
+                        ht.Add(charArray[i],i);
                     }
                 }
             }
