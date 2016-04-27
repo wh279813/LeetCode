@@ -19,12 +19,13 @@
                     for (int j = (int)ht[tempChar]; j >=  i - len; j--)
                     {
                         ht.Remove(charArray[j]);
-                        len = len - (int)ht[tempChar] + 1;
+                        len--;
                     }
                     ht.Add(charArray[i],i);
                 }
             }
-                return maxLength;
+             maxLength = GetLarger(maxLength, len);
+             return maxLength;
         }
 
         public int GetLarger(int a, int b)
