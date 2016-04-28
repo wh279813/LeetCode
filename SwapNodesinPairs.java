@@ -2,7 +2,7 @@ public class Solution {
     public static ListNode ReverseTwoNodes(ListNode head)
     {
         ListNode temp = head.next;
-        head.next = null;
+        head.next = temp.next;
         temp.next = head;
         return temp;
     }
