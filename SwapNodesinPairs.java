@@ -17,6 +17,7 @@ public class Solution {
             head = head.next.next;
         }
         while(head != null && head.next!= null) 
+        return TheHead;
     }
-    return TheHead;
+    
 }
