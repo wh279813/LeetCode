@@ -1,5 +1,5 @@
 public class Solution {
-    public static ListNode ReverseTwoNodes(ListNode head)
+    public static ListNode ReverseFirstTwoNodes(ListNode head)
     {
         ListNode temp = head.next;
         head.next = temp.next;
@@ -13,7 +13,7 @@ public class Solution {
         ListNode TheHead = head;
         Do 
         {
-            head = ReverseTwoNodes(head);
+            head = ReverseFirstTwoNodes(head);
             head = head.next.next;
         }
         while(head != null && head.next!= null) 
