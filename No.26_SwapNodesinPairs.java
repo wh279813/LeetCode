@@ -1,7 +1,7 @@
 public class Solution {
-    public static int result = 1;
     public int removeDuplicates(int[] nums) 
     {
+        int result = 1;
         if(nums == null)
             return 0;
         else if(nums.length == 1)
