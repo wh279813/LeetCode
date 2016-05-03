@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This problem can be solved by the data structure Stack.
+ * Push the left parenthesis into stack first, then determine the next input char.
+ * If the next and current ones are not a pair, return false.
  */
 package test;
 
@@ -19,13 +19,13 @@ public class Solution {
         {
             if(arr[i]== '(' ||arr[i]== '{'||arr[i]== '[' )
             {
-                stack.push(arr[0]);
+                stack.push(arr[0]);                                         //If left ones, push the char in sequence.
             }
-            else if(arr[i]== ')' ||arr[i]== '}'||arr[i]== ']')
+            else if(arr[i]== ')' ||arr[i]== '}'||arr[i]== ']')              //For right ones, must make sure stack is not empty.
             {
                 if(stack.isEmpty())
                     return false;
-                else if(mapping(arr[i]) != (Character)stack.pop())
+                else if(mapping(arr[i]) != (Character)stack.pop())          //Pop the left out, if they don't match, return false.
                     return false;
             }
         }
@@ -35,7 +35,10 @@ public class Solution {
             return true;
     }
     
-    public static char mapping(char inputChar)
+    /*
+     * The matching relationship between left ones and right ones.
+     */
+    public static char mapping(char inputChar)                               
     {
         switch(inputChar)
         {
