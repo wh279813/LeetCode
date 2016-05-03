@@ -19,7 +19,7 @@ public class Solution {
         {
             if(arr[i]== '(' ||arr[i]== '{'||arr[i]== '[' )
             {
-                stack.push(arr[0]);                                         //If left ones, push the char in sequence.
+                stack.push(arr[i]);                                         //If left ones, push the char in sequence.
             }
             else if(arr[i]== ')' ||arr[i]== '}'||arr[i]== ']')              //For right ones, must make sure stack is not empty.
             {
