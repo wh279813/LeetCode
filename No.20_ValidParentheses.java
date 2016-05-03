@@ -1,6 +1,6 @@
 /*
  * This problem can be solved by the data structure Stack.
- * Push the left parenthesis into stack first, then determine the next input char.
+ * Process: Push the left parenthesis into stack first, then determine the next input char.
  * If the next and current ones are not a pair, return false.
  */
 package test;
