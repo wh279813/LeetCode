@@ -21,9 +21,11 @@ public class Solution {
             {
                 stack.push(arr[0]);
             }
-            else if(arr[i]== ')' ||arr[i]== '}'||arr[i]== ']' )
+            else if(arr[i]== ')' ||arr[i]== '}'||arr[i]== ']')
             {
-                if((arr[i]-1) != (Character)stack.pop())
+                if(stack.isEmpty())
+                    return false;
+                else if(mapping(arr[i]) != (Character)stack.pop())
                     return false;
             }
         }
@@ -31,5 +33,16 @@ public class Solution {
             return false;
         else
             return true;
+    }
+    
+    public static char mapping(char inputChar)
+    {
+        switch(inputChar)
+        {
+            case ')':return '(';
+            case '}':return '{';
+            case ']':return '[';
+            default: return 0;
+        }
     }
 }
