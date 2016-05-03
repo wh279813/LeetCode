@@ -36,7 +36,7 @@ public class Solution {
     }
     
     /*
-     * The matching relationship between left ones and right ones.
+     * The matching relationship, tracking right ones to left ones.
      */
     public static char mapping(char inputChar)                               
     {
