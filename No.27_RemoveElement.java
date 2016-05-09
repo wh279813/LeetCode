@@ -1,6 +1,6 @@
 /* 虽然这个题只要求返回int值
 *  但是只遍历一下并返回一个累加的size得到的结果是wrong anwser.
-*  AC方法为：把不等于val的值放到原数组中，从0开始
+*  AC方法为：每当遇见不等于val的值，放到原数组中，从0开始
 */
 
 public class Solution {
