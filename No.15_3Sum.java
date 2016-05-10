@@ -6,6 +6,7 @@
 package test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -29,11 +30,29 @@ public class Solution
                                         SumToZero.add(nums[first]);
                                         SumToZero.add(nums[second]);
                                         SumToZero.add(nums[third]);
-    					result.add(SumToZero);
+                                        Collections.sort(SumToZero);
+                                        result.add(SumToZero);                                      
     				}   				
     			}
     		}
     	}     
+        removeDuplicate(result);
     	return result;
     }
+    
+   public static void removeDuplicate(List list)
+   {  
+        for ( int i = 0 ; i < list.size() - 1 ; i ++ )
+        {  
+             for ( int j = list.size() - 1 ; j > i; j -- ) {  
+                if (list.get(j).equals(list.get(i))) 
+                {  
+                  list.remove(j);  
+                }
+            }   
+    }   
+    System.out.println(list);  
+   }   
 }
+
+
