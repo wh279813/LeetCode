@@ -25,16 +25,16 @@ public class Solution
     		{
     			for (int third=second+1;third<nums.length;third++ ) 
     			{
-    				if(nums[first] + nums[second] + nums[third] == 0)
+    				if(nums[first] + nums[second] + nums[third] == 0)				//三次循环
     				{
     					List<Integer> SumToZero = new ArrayList<Integer>();
                                         SumToZero.add(nums[first]);
                                         SumToZero.add(nums[second]);
                                         SumToZero.add(nums[third]);
-                                        Collections.sort(SumToZero);
-                                        for(int i =0;i<result.size();i++)
+                                        Collections.sort(SumToZero);				//排序
+                                        for(int i =0;i<result.size();i++)		
                                         {
-                                            if (result.get(i).equals(SumToZero))
+                                            if (result.get(i).equals(SumToZero))    //如果result没有这个SumToZero，才添加
                                                 Exitflag = true;
                                                                                                                                              
                                         }
