@@ -1,5 +1,4 @@
 /*
- * ----Not finish yet----
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -15,7 +14,7 @@ import java.util.List;
  */
 public class Solution 
 {
-    public  List<List<Integer>> threeSum(int[] nums)
+    public static List<List<Integer>> threeSum(int[] nums)
     {
     	List<List<Integer>> result = new ArrayList<List<Integer>>();
     	for(int first=0;first<nums.length;first++)
