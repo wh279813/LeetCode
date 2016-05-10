@@ -17,6 +17,7 @@ public class Solution
 {
     public static List<List<Integer>> threeSum(int[] nums)
     {
+        boolean Exitflag = false;
     	List<List<Integer>> result = new ArrayList<List<Integer>>();
     	for(int first=0;first<nums.length;first++)
     	{
@@ -31,28 +32,34 @@ public class Solution
                                         SumToZero.add(nums[second]);
                                         SumToZero.add(nums[third]);
                                         Collections.sort(SumToZero);
+                                        for(int i =0;i<result.size();i++)
+                                        {
+                                            if (result.get(i).equals(SumToZero))
+                                                Exitflag = true;
+                                                                                                                                             
+                                        }
+                                        if(!Exitflag)
                                         result.add(SumToZero);                                      
     				}   				
     			}
     		}
     	}     
-        removeDuplicate(result);
+        System.out.println(result);  ;
     	return result;
     }
     
-   public static void removeDuplicate(List list)
-   {  
-        for ( int i = 0 ; i < list.size() - 1 ; i ++ )
-        {  
-             for ( int j = list.size() - 1 ; j > i; j -- ) {  
-                if (list.get(j).equals(list.get(i))) 
-                {  
-                  list.remove(j);  
-                }
-            }   
-    }   
-    System.out.println(list);  
-   }   
+//   public static void removeDuplicate(List list)
+//   {  
+//        for ( int i = 0 ; i < list.size() - 1 ; i ++ )
+//        {  
+//             for ( int j = list.size() - 1 ; j > i; j -- ) {  
+//                if (list.get(j).equals(list.get(i))) 
+//                {  
+//                  list.remove(j);  
+//                }
+//            }   
+//        }   
+//   } 
 }
 
 
