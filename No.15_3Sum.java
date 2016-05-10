@@ -13,9 +13,11 @@ import java.util.List;
  *
  * @author harry.wang
  */
+
 public class Solution 
 {
-    public static List<List<Integer>> threeSum(int[] nums)
+	//Search by Brute-force algorithm---Time complexity O(N^3)  Too much!!!
+    public static List<List<Integer>> threeSumByEnum(int[] nums)
     {
         boolean Exitflag = false;
     	List<List<Integer>> result = new ArrayList<List<Integer>>();
@@ -47,6 +49,13 @@ public class Solution
     	}     
         System.out.println(result);  ;
     	return result;
+    }
+
+    //Search by sort algorithm
+    public static List<List<Integer>> threeSum(int[] nums)
+    {
+
+
     }
     
 }
