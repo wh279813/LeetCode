@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * The difficult part of this one is to remove duplicated item.
+ * e.g. List result already has a item {-1,0,1}, another {-1,0,1} should not be added to it.
+ * Actually it is hard to realize, because all the instances of objects are only reference.
  */
 package test;
 
