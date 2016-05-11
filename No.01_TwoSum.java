@@ -19,14 +19,14 @@ public class Solution {
         int tail = nums.length - 1;
         while(head < tail)
         {
-        	if(nums[head]+nums[tail]<target)
-        		head ++;
-        	else if(nums[head]+nums[tail]>target)
-        		tail --
-        	else
-        		return new int[]{nums[head],nums[tail]};
+            if(nums[head]+nums[tail]<target)
+                    head ++;
+            else if(nums[head]+nums[tail]>target)
+                    tail --;
+            else
+                    return new int[]{nums[head],nums[tail]};   //此处有一个问题，题目要求返回的是下标，但是下标已经被打乱
         }
-    	return null;
+        return null;
     }
 }
 
