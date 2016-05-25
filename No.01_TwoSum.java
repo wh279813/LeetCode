@@ -27,6 +27,7 @@ public class Solution {
                     return new int[]{nums[head],nums[tail]};   //此处有一个问题，题目要求返回的是下标，但是下标已经被打乱
         }
         return null;
+        
     }
 }
 
