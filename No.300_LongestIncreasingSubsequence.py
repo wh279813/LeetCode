@@ -1,5 +1,4 @@
 class Solution(object):
-	
     def lengthOfLIS(self, nums):
         """
         :type nums: List[int]
@@ -19,7 +18,3 @@ class Solution(object):
         	maxSum = max(maxSum,dp[i])
         return maxSum
 
-test = Solution()    
-input = [10, 9, 2, 5, 3, 7, 101, 18]
-result = test.lengthOfLIS(input)
-print(result)
