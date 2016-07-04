@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * @author wanghuan
  */
 
-public class myMethod {
+public class Solution {
     public int[] intersection(int[] nums1, int[] nums2) 
     {
         HashMap hash = new HashMap();

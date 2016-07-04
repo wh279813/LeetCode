@@ -9,7 +9,7 @@ package javapractice;
  * @author wanghuan
  */
 
-public class myMethod {
+public class Solution {
     public int maxSubArray(int[] nums) {   
         int n = nums.length;
         if(n == 0)

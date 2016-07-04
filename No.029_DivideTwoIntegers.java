@@ -11,7 +11,7 @@ package javapractice;
  * @author wanghuan
  */
 
-public class myMethod {
+public class Solution {
     public static int divide(int dividend, int divisor) {
         int result = 0;
         if(divisor == 0)
