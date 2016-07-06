@@ -17,26 +17,26 @@ import java.util.ArrayList;
  * @author wanghuan
  */
 public class Solution {
-    static ArrayList<String> list = new ArrayList<String>();    
     public static List<String> generateParenthesis(int n) {
-        dfs("", n , n);
-        return list;
+        ArrayList<String> lists = new ArrayList<String>();    
+        dfs(lists,"", n , n);
+        return lists;
     }
     
-    public static void dfs(String str,int l,int r) //参数中的l,r是还需要添加的左右括号数量
+    public static void dfs(ArrayList<String> tmp, String str,int l,int r) //参数中的l,r是还需要添加的左右括号数量
     {
         if(l > r)                           //不用再额外计数以使左括号的数量大于右括号
             return;
         if(l > 0)                           
         {                                   
-            dfs(str + "(", l -1, r);
+            dfs(tmp,str + "(", l -1, r);
         }
         if(r > 0)
         {              
-            dfs(str + ")", l, r - 1);           //先加左括号还是右括号由36行和31行的顺序决定
+            dfs(tmp,str + ")", l, r - 1);           //先加左括号还是右括号由36行和31行的顺序决定
         }
         if(l == 0 && r == 0)       
-            list.add(str);
+            tmp.add(str);
             return;
     }
 }
