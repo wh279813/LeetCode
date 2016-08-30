@@ -20,7 +20,9 @@ class Solution:
         return self.isValidSubTree(root, float('-inf'), float('inf'))
         
     def isValidSubTree(self, node, lower, upper):
+         # 该节点要满足大小范围
         return node.val < upper and node.val > lower \
+        # 递归：该节点的左子节点，更新范围，左子树的最大范围为该节点的值
         and (self.isValidSubTree(node.left, lower, node.val) if node.left else True) \
         and (self.isValidSubTree(node.right, node.val, upper) if node.right else True)
 
