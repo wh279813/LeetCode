@@ -23,7 +23,7 @@ class Solution(object):
         		left = ht[s[right]] + 1 
 
         	# 如果右指针指向的字母是不重复的：
-        	ht[s[right]] = right 
+        	ht[s[right]] = right # 把新录到的字母－位置加入hashtable
         	right += 1 
 
         maxCount = max(maxCount , right - left)
